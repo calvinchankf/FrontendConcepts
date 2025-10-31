@@ -25,4 +25,4 @@ On the other side, in Valiina Javascript
 | Version  | Details | Links |
 | -------- | ------- | ------- |
 | [v0](/vanilla-widgets-implementation/stopwatch/v0/) | `setInterval` | [demo](https://stackblitz.com/edit/vitejs-vite-yqxsvjbp?file=src%2Fstopwatch.js) |
-| [v1](/vanilla-widgets-implementation/stopwatch) | `requestAnimationFrame` | [demo](https://stackblitz.com/edit/vitejs-vite-8sr1yd9l?file=src%2Fstopwatch.js) |
+| [v1](/vanilla-widgets-implementation/stopwatch/v1/) | `requestAnimationFrame` | [demo](https://stackblitz.com/edit/vitejs-vite-8sr1yd9l?file=src%2Fstopwatch.js) |
