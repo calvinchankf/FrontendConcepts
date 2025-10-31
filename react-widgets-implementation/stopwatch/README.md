@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Stop Watch / Timer Implmentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This question looks simple on first glance but is actually more complex than it seems.
 
-In the project directory, you can run:
+1. `setInterval`'s `delay` is unreliable. The actual amount of time that elapses between calls to the callback may be longer than the given delay due to various reasons  e.g. nested timeouts, inactive tabs, throttling (firefox), timeouts in Web Extension. Reference: https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. `useEffect` is async, there will be a delay on click if you use it on the start/pause button 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+===
 
-### `npm test`
+Below is a list of implementations, starting from a naive approach to an optimal appraoch.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Version  | Details | Links |
+| -------- | ------- | ------- |
+| [v0](/v0/)  | unreliable `setInterval` | [demo](https://stackblitz.com/edit/vitejs-vite-kkwfsbml?file=src%2FStopwatch.jsx) |
+| [v1](/v1/)  | a trick is to use `setInterval` for time calculation, but `Date.now()` is inacurrate that affected by system clock change, also `useEffect` has a delay in start & pause button on click | [demo](https://stackblitz.com/edit/vitejs-vite-7kfz8mhf?file=src%2FStopwatch.jsx) |
+| [v2](/v2/)  | keep using `setInterval` trick but minimize button click delay by using `performance.now()`, however still keep calling `useEffect` every 10ms | [demo](https://stackblitz.com/edit/vitejs-vite-6punuawq?file=src%2FStopwatch.jsx) |
+| [v3](/v3/) | use `requestAnimationFrame` instead of `setInterval` | [demo](https://stackblitz.com/edit/vitejs-vite-2cg3vpj1?file=src%2FStopwatch.jsx) |
+| [v4](/v4/) | final version | [demo](https://stackblitz.com/edit/vitejs-vite-fnq9a33e?file=src%2FStopwatch.jsx) |
 
-### `npm run build`
+On the other side, in Valiina Javascript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| [v0](/vanilla-widgets-implementation/stopwatch/v0/) | `setInterval` | [demo](https://stackblitz.com/edit/vitejs-vite-yqxsvjbp?file=src%2Fstopwatch.js) |
+| [v1](/vanilla-widgets-implementation/stopwatch) | `requestAnimationFrame` | [demo](https://stackblitz.com/edit/vitejs-vite-8sr1yd9l?file=src%2Fstopwatch.js) |

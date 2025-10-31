@@ -124,7 +124,7 @@ This repo is on <http://calvinchankf.com/JSConcepts/> , thanks Github Pages
 1. [Star Rating](/react-widgets-implementation/star-rating/)
 1. [Digital Clock](/react-widgets-implementation/digital-clock/)
 1. [Tic Tac Toe](/react-widgets-implementation/tic-tac-toe/)
-1. [Stopwatch](/react-widgets-implementation/stopwatch/)
+1. [Stopwatch](/react-widgets-implementation/stopwatch/readme.md)
 1. [File Explorer](/react-widgets-implementation/file-explorer/)
 
 ## Angular Widgets Implementation
