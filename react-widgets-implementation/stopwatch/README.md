@@ -22,5 +22,7 @@ Below is a list of implementations, starting from a naive approach to an optimal
 
 On the other side, in Valiina Javascript
 
+| Version  | Details | Links |
+| -------- | ------- | ------- |
 | [v0](/vanilla-widgets-implementation/stopwatch/v0/) | `setInterval` | [demo](https://stackblitz.com/edit/vitejs-vite-yqxsvjbp?file=src%2Fstopwatch.js) |
 | [v1](/vanilla-widgets-implementation/stopwatch) | `requestAnimationFrame` | [demo](https://stackblitz.com/edit/vitejs-vite-8sr1yd9l?file=src%2Fstopwatch.js) |
