@@ -139,7 +139,6 @@ This repo is on <http://calvinchankf.com/FrontendConcepts/> , thanks Github Page
 1. [Find DOM Node in Another Tree with similar Hierarchy](/algo/find-node-in-another-similar-tree.html)
 1. [DOM Store](/algo/dom-store.html)
 1. [Implement fibanacci using closure](/algo/fibonacci-using-closure.js)
-1. [Implement fibanacci using closure](/algo/fibonacci-using-closure.js)
 1. [Move an element using js](/algo/animate-right.html)
 1. [Mirror the architecture of a DOM tree](/algo/mirror-dom.js)
 
