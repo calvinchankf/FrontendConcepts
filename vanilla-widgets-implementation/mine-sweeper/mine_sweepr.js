@@ -1,4 +1,6 @@
 /*
+    Demo: https://stackblitz.com/edit/vitejs-vite-wgqsvkzq?file=mine_sweepr.js
+
     The player is shown a 2-dimensional grid of empty squares 'Hidden' in the grid are X number of Mines.
     The goal for the player is to 'Explore' all of the squares except for the ones hiding Mines.
 

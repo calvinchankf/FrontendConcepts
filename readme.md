@@ -2,7 +2,7 @@
 
 My progress to master FrontEnd interviews. Gonna learn and update the repo until I am good at it.
 
-This repo is on <http://calvinchankf.com/JSConcepts/> , thanks Github Pages
+This repo is on <http://calvinchankf.com/FrontendConcepts/> , thanks Github Pages
 
 ## Browser
 
