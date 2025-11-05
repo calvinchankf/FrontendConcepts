@@ -100,6 +100,7 @@ This repo is on <http://calvinchankf.com/JSConcepts/> , thanks Github Pages
 1. [DOM Renderer](/vanilla-widgets-implementation/DOMRenderer/index.html)
 1. [Analog Clock](/vanilla-widgets-implementation/analog-clock/index.html)
 1. [Tic Tac toe](/vanilla-widgets-implementation/tic-tac-toe/index.html)
+1. [Mine Sweeper](/vanilla-widgets-implementation/mine-sweeper/mine_sweeper.html)
 
 ## React Widgets Implementation
 
