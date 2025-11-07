@@ -61,24 +61,19 @@ class MineSweeper {
             }
         }
 
-        const reservoirSet = new Set(reservoir)
-        for (let i = 0; i < R; i++) {
-            for (let j = 0; j < C; j++) {
-                if (reservoirSet.has(`${i},${j}`)) {
-                    this.hidden_board[i][j] = -1
+        for (let key of reservoir) {
+            const [i, j] = key.split(',').map(x => parseInt(x))
+            this.hidden_board[i][j] = -1
+            incrementNeighbours(i-1, j-1)
+            incrementNeighbours(i-1, j)
+            incrementNeighbours(i-1, j+1)
 
-                    incrementNeighbours(i-1, j-1)
-                    incrementNeighbours(i-1, j)
-                    incrementNeighbours(i-1, j+1)
+            incrementNeighbours(i, j-1)
+            incrementNeighbours(i, j+1)
 
-                    incrementNeighbours(i, j-1)
-                    incrementNeighbours(i, j+1)
-
-                    incrementNeighbours(i+1, j-1)
-                    incrementNeighbours(i+1, j)
-                    incrementNeighbours(i+1, j+1)
-                }
-            }
+            incrementNeighbours(i+1, j-1)
+            incrementNeighbours(i+1, j)
+            incrementNeighbours(i+1, j+1)
         }
     }
     click(i, j) {
