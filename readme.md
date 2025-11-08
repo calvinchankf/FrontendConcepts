@@ -128,10 +128,6 @@ This repo is on <http://calvinchankf.com/FrontendConcepts/> , thanks Github Page
 1. [Stopwatch](/react-widgets-implementation/stopwatch/README.md)
 1. [File Explorer](/react-widgets-implementation/file-explorer/)
 
-## Angular Widgets Implementation
-
-1. [Temperature Converter](/angular-widgets-implementation/temperature-converter/)
-
 ## Common Algorithms of DOM Elements
 
 1. [Lowest Common Ancestor](/algo/common-ancestor.html)
